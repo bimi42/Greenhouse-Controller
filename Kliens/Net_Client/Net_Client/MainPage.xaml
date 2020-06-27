@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Net_Client.MainPage">
+
+    <StackLayout>
+        <!-- Place new controls here -->
+        <CollectionView x:Name="datas" />
+        <Button Text="Mérési adatok lekérdezése" Clicked="Handle_Clicked" />
+        <DatePicker x:Name ="datePicker"/>
+        <StackLayout Orientation="Horizontal">
+            <CheckBox x:Name="checkTemperature" />
+            <Label Text="Hőmérséklet"/>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal">
+            <CheckBox x:Name="checkHumidity" />
+            <Label Text="Páratartalom"/>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal">
+            <Editor x:Name="measureValue" Placeholder="Mért érték"/>
+            <Editor x:Name="greenhouseIDValue" Placeholder="Üvegház ID"/>
+            <Editor x:Name="sensorIDValue" Placeholder="Szenzor ID"/>
+            <Button x:Name="sendButton" Text="Küld" Clicked="Button_Clicked"/>
+        </StackLayout>
+        <Button Text="Mérési adatok fájlba mentése" Clicked="Button_Clicked_2"/>
+        <Button Text="Mentett adatok megjelenítése" Clicked="Button_Clicked_3"/>
+        <StackLayout Orientation="Horizontal">
+            <Editor x:Name="referenceTemperature" Placeholder="Referencia hőmérséklet"/>
+            <Editor x:Name="referenceHumidity" Placeholder="Referencia Páratartalom"/>
+        </StackLayout>
+        <Button Text ="Referencia értékek elküldése" Clicked="Button_Clicked_1"/>
+    </StackLayout>
+
+</ContentPage>
